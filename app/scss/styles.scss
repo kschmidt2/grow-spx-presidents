@@ -63,6 +63,9 @@ $breakpoint-lg: 717px;
         transform: translate(0,20px) !important;
       }
     }
+    &:nth-child(even) {
+      transform: translate(0,-5px) !important;
+    }
     & span {
       background-color: hsla(0,0%,100%,.6) !important;
       @include x-small {

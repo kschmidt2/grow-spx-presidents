@@ -87,7 +87,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     title: false,
                     labels: {
                         useHTML: true,
-                        overflow: 'allow'
+                        overflow: 'allow',
+                        formatter: function () {
+                            return this.value;
+                        }
                     },
                     max: 4000
                 },
