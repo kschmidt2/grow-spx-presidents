@@ -47,7 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     type: 'area',
                     styledMode: true,
                     spacingBottom: 25,
-                    spacingRight: 100
+                    spacingRight: 100,
+                    spacingLeft: 0   
                 }, 
                 title: {
                     text: null
