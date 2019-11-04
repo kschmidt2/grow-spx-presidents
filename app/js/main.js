@@ -14,11 +14,11 @@ let subhead = document.getElementsByClassName("chart-subhead"),
         }       
      }
 
-Highcharts.setOptions({
-    lang: {
-      thousandsSep: ','
-    }
-});
+     Highcharts.setOptions({
+        lang: {
+          thousandsSep: ''
+        }
+    });
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             Highcharts.chart(chartId, {
                 chart: {
-                    type: 'bar',
+                    type: 'area',
                     styledMode: true,
                     spacingBottom: 25,
                     spacingRight: 100
@@ -53,37 +53,27 @@ document.addEventListener('DOMContentLoaded', function () {
                     text: null
                 },
                 data: {
-                    googleSpreadsheetKey: '1YOKb5l2VM4aAB2r20N_1aT_1vEajYrP3U-U3A6lZbC0'
-                },
-                // for bar charts only
-                plotOptions: {
-                    series: {
-                        groupPadding: 0.1
-                    } 
+                    googleSpreadsheetKey: '10ZOmaDlywlSWoQAK_wuOnrhC0gMC0Kp39i9CZ4BGN9I'
                 },
                 // for line charts only
-                // plotOptions: {
-                //     series: {
-                //         lineWidth: 1,
-                //         // clip: false,
-                //         marker: {
-                //             enabled: false,
-                //             symbol: 'circle',
-                //             fillColor: '#ffffff',
-                //             states: {
-                //                 hover: {
-                //                     fillColor: '#ffffff'
-                //                 }
-                //             }
-                //         }
-                //     }
-                // },
+                plotOptions: {
+                    series: {
+                        lineWidth: 1,
+                        clip: true,
+                        marker: {
+                            enabled: false,
+                            symbol: 'circle',
+                            fillColor: '#ffffff',
+                            states: {
+                                hover: {
+                                    enabled: false
+                                }
+                            }
+                        }
+                    }
+                },
                 legend: {
-                    align: 'right',
-                    symbolRadius: 0,
-                    verticalAlign: 'top',
-                    x: 10,
-                    itemMarginTop: -10
+                    enabled: false
                 },
                 xAxis: {
                     labels: {
@@ -98,15 +88,84 @@ document.addEventListener('DOMContentLoaded', function () {
                     labels: {
                         useHTML: true,
                         overflow: 'allow'
-                    }
+                    },
+                    max: 4000
                 },
                 credits: {
                     enabled: false
                 },
                 tooltip: {
-                    shadow: false,
-                    padding: 10
+                    enabled: false
                 },
+                annotations: [{
+                    labels: [{
+                        point: {
+                            x: 349126358000, // timestamp
+                            y: 4000, // value
+                            xAxis: 0, // yAxis INDEX
+                            yAxis: 0 // xAxis INDEX
+                        },
+                        text: 'Ronald Reagan<br><b>+118%</b>',
+                        y: 0,
+                        x: -5  
+                    }, {
+                        point: {
+                            x: 601327958000, // timestamp
+                            y: 4000, // value
+                            xAxis: 0, // yAxis INDEX
+                            yAxis: 0 // xAxis INDEX
+                        },
+                        text: 'George H.W. Bush<br><b>+53%</b>',
+                        y: 40,
+                        x:-5 
+                    }, {
+                        point: {
+                            x: 727731158000, // timestamp
+                            y: 4000, // value
+                            xAxis: 0, // yAxis INDEX
+                            yAxis: 0 // xAxis INDEX
+                        },
+                        text: 'Bill Clinton<br><b>+208%</b>',
+                        y: 0,
+                        x:-5 
+                    }, {
+                        point: {
+                            x: 980019158000, // timestamp
+                            y: 4000, // value
+                            xAxis: 0, // yAxis INDEX
+                            yAxis: 0 // xAxis INDEX
+                        },
+                        text: 'George W. Bush<br><b>-37%</b>',
+                        y: 40,
+                        x:-5 
+                    }, {
+                        point: {
+                            x: 1232739158000, // timestamp
+                            y: 4000, // value
+                            xAxis: 0, // yAxis INDEX
+                            yAxis: 0 // xAxis INDEX
+                        },
+                        text: 'Barack Obama<br><b>+173%</b>',
+                        y: 0,
+                        x:-5  
+                    }, {
+                        point: {
+                            x: 1572897491000, // timestamp
+                            y: 4000, // value
+                            xAxis: 0, // yAxis INDEX
+                            yAxis: 0 // xAxis INDEX
+                        },
+                        text: 'Donald Trump<br><b>+35%</b>',
+                        y: 40,
+                        x:9
+                    }],
+                    labelOptions: {
+                        allowOverlap: true,
+                        useHTML: true,
+                        verticalAlign: 'top',
+                        align: 'left'
+                    }
+                }],
                 responsive: {
                     rules: [{
                     condition: {

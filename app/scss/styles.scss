@@ -48,16 +48,32 @@ $breakpoint-lg: 717px;
 
   & .chart-container {
     width: 100%;
-    height: 300px;
+    height: 400px;
     margin-top: -10px;
-    @include sm-md-xl {
-      height: 400px;
-    }
   }
 
   & .grow-logo {
     width: 214px;
     margin-top: 20px;
+  }
+
+  & .highcharts-annotation-label {
+    &:nth-child(odd) {
+      @include x-small {
+        transform: translate(0,20px) !important;
+      }
+    }
+    & span {
+      background-color: hsla(0,0%,100%,.6) !important;
+      @include x-small {
+        max-width: 60px;
+        white-space: normal !important;
+      } 
+    }
+  }
+
+  & b {
+    font-weight: 600;
   }
   
 }

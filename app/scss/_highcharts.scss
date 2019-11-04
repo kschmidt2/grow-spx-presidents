@@ -50,9 +50,7 @@
   
   .highcharts-tracker-line {
     stroke-linejoin: round;
-    stroke: $slate-secondary-5;
-    stroke-width: 1.5;
-    stroke-dasharray: 4;
+    stroke-width: 3;
     fill: none;
   }
   
@@ -84,11 +82,6 @@
   .highcharts-yaxis-labels {
     fill: $slate-secondary-5;
     // use this to change the axis label
-    & span:first-child {
-      &:after {
-        content: "%";
-    }
-    }
   }
   
   .highcharts-grid-line {
@@ -205,54 +198,64 @@
   /* Series options */
   /* Default colors */
   .highcharts-color-0 {
-    fill: $green-primary;
-    stroke: $green-primary;
+    fill: rgba($slate-secondary-3,.75);
+    stroke: none;
   }
   
   .highcharts-color-1 {
-    fill: $slate-secondary-3;
-    stroke: $slate-secondary-3;
+    fill: $slate-secondary-2;
+    stroke: none;
   }
   
   .highcharts-color-2 {
-    fill: $purple-primary;
-    stroke: $purple-primary;
+    fill: rgba($slate-secondary-3,.75);
+    stroke: none;
   }
   
   .highcharts-color-3 {
-    fill: $yellow-primary;
-    stroke: $yellow-primary;
+    fill: $slate-secondary-2;
+    stroke: none;
   }
   
   .highcharts-color-4 {
-    fill: $blue-primary;
-    stroke: $blue-primary;
+    fill: rgba($slate-secondary-3,.75);
+    stroke: none;
   }
   
-  // .highcharts-color-5 {
-  //   fill: #f15c80;
-  //   stroke: #f15c80;
-  // }
+  .highcharts-color-5 {
+    fill: $slate-secondary-2;
+    stroke: none;
+  }
   
-  // .highcharts-color-6 {
-  //   fill: #e4d354;
-  //   stroke: #e4d354;
-  // }
+  .highcharts-color-6 {
+    fill: $green-secondary-4;
+    stroke: none;
+  }
   
-  // .highcharts-color-7 {
-  //   fill: #2b908f;
-  //   stroke: #2b908f;
-  // }
+  .highcharts-color-7 {
+    fill: $green-primary;
+    stroke: none;
+  }
   
-  // .highcharts-color-8 {
-  //   fill: #f45b5b;
-  //   stroke: #f45b5b;
-  // }
+  .highcharts-color-8 {
+    fill: $green-secondary-4;
+    stroke: none;
+  }
   
-  // .highcharts-color-9 {
-  //   fill: #91e8e1;
-  //   stroke: #91e8e1;
-  // }
+  .highcharts-color-9 {
+    fill: $green-primary;
+    stroke: none;
+  }
+
+  .highcharts-series-10 {
+    fill: $green-secondary-4;
+    stroke: none;
+  }
+
+  .highcharts-series-11 {
+    fill: $green-primary;
+    stroke: none;
+  }
   
   .highcharts-area {
     fill-opacity: 0.75;
